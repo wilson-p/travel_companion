@@ -29,7 +29,7 @@ public class UserResources {
 	
 	@GET
 	@Path("/{userId}")
-	public User getUser(@PathParam("userId") long userId){
+	public User getUser(@PathParam("userId") int userId){
 		return userService.getUser(userId);
 	}
 	
@@ -40,14 +40,14 @@ public class UserResources {
 	
 	@PUT
 	@Path("/{userId}")
-	public User updateUser(@PathParam("userId") long userId, User user){
-		user.setUserId(userId);
-		return userService.updateUser(user);
+	public User updateUser(@PathParam("userId") int userId, User user){
+		//user.setUserId(userId);
+		return userService.updateUser(userId, user);
 	}
 	
 	@DELETE
 	@Path("/{userId}")
-	public User deleteUser(@PathParam("userId") long userId){
-		return userService.removeUser(userId);
+	public void deleteUser(@PathParam("userId") int userId){
+		userService.removeUser(userId);
 	}
 }

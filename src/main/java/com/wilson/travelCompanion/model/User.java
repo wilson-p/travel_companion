@@ -1,59 +1,116 @@
 package com.wilson.travelCompanion.model;
 
+import java.sql.Timestamp;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class User {
-	
-	private long userId;
-	private String name;
+
+	private int userId;
+	private String userName;
 	private String emailId;
-	private String password;
+	private boolean isEmailVerified;
+	private String firstName;
+	private String lastName;
+	private Timestamp createdDate;
+	private String createdBy;
+	private Timestamp updatedDate;
+	private String updatedBy;
 	
 	public User(){
 		
 	}
-	
-	public User(long userId, String name, String emailId, String password) {
-		this.userId = userId;
-		this.name = name;
-		this.emailId = emailId;
-		this.password = password;
-	}
-	
-	public long getUserId() {
+
+
+	public int getUserId() {
 		return userId;
 	}
-	
-	public void setUserId(long userId) {
+
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 
-	public String getName() {
-		return name;
+	public String getUserName() {
+		return userName;
 	}
-	public void setName(String name) {
-		this.name = name;
+
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
+
 	public String getEmailId() {
 		return emailId;
 	}
+
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
 	}
-	public String getPassword() {
-		return password;
+
+	public boolean isEmailVerified() {
+		return isEmailVerified;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+
+	public void setEmailVerified(boolean isEmailVerified) {
+		this.isEmailVerified = isEmailVerified;
 	}
-	
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public Timestamp getCreatedDate() {
+		return createdDate;
+	}
+
+	public void setCreatedDate(Timestamp timestamp) {
+		this.createdDate = timestamp;
+	}
+
+	public String getCreatedBy() {
+		return createdBy;
+	}
+
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
+
+	public Timestamp getUpdatedDate() {
+		return updatedDate;
+	}
+
+	public void setUpdatedDate(Timestamp timestamp) {
+		this.updatedDate = timestamp;
+	}
+
+	public String getUpdatedBy() {
+		return updatedBy;
+	}
+
+	public void setUpdatedBy(String updatedBy) {
+		this.updatedBy = updatedBy;
+	}
+
 	@Override
 	public String toString() {
-		return "User [name=" + name + ", emailId=" + emailId + ", password=" + password + "]";
+		return "UserNew [userId=" + userId + ", userName=" + userName + ", emailId=" + emailId + ", isEmailVerified="
+				+ isEmailVerified + ", firstName=" + firstName + ", lastName=" + lastName + ", createdDate="
+				+ createdDate + ", createdBy=" + createdBy + ", updatedDate=" + updatedDate + ", updatedBy=" + updatedBy
+				+ "]";
 	}
 	
 	
-
+	
 }
